@@ -22,7 +22,14 @@ class StatusesControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
+  test "should be logged in to post a status" do 
+    post :create, status: {content: "Hello"}
+    assert_response :redirect
+    assert_redirected_to new_user_session_path
+  end
+
   test "should create status" do
+    sign_in users(:kelvin)
     assert_difference('Status.count') do
       post :create, status: { content: @status.content }
     end
@@ -41,11 +48,13 @@ class StatusesControllerTest < ActionController::TestCase
   end
 
   test "should update status" do
+    sign_in users(:kelvin)
     patch :update, id: @status, status: { content: @status.content }
     assert_redirected_to status_path(assigns(:status))
   end
 
   test "should destroy status" do
+    sign_in users(:kelvin)
     assert_difference('Status.count', -1) do
       delete :destroy, id: @status
     end
