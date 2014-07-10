@@ -17,5 +17,6 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
 	test "that a profile page works" do 
 		get '/Pikachu'
 		assert_template :success
+	end
 
 end

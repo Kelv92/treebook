@@ -13,4 +13,10 @@ class User < ActiveRecord::Base
          						  	message: "Must be formatted correctly."
          						  }
  	has_many :status
+def gravitar_url
+  stripped_email = email.strip
+  downcase_email = stripped_email.downcase
+  hash = Digest::MD5.hexdigest(downcased_email)
+  "http://gravatar.com/avatar/#{hash}"
+end
 end
