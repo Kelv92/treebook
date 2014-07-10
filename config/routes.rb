@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get 'register', to: 'devise/registrations#new', as: :register
     get 'login', to: 'devise/sessions#new', as: :login
     get 'logout', to: 'devise/sessions#destroy', as: :destroy
-    get 'edit', to: 'devise/passwords#edit', as: :edit
+    get 'edit', to: 'devise/registrations#edit', as: :edit
   end
 
 
