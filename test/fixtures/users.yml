@@ -3,3 +3,9 @@ kelvin:
  first_name: "Kelvin"
  last_name: "Hoo"
  profile_name: "Pikachu"
+
+kelvin1:
+ email: "kelv91@yahoo.com"
+ first_name: "Kelvin1"
+ last_name: "Hoo1"
+ profile_name: "Pikachu1"
