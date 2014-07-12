@@ -1,7 +1,9 @@
 <div class="page-header">
   <h1 class="brand"> Center of the Universe </h1>
 </div>
+<div class ="new_stat_btt">
 <%= link_to "Post a New Status", new_status_path, class:"btn btn-success" %>
+</div>
 <% @statuses.each do |status| %>
 <div class="status">
   <div class = "row">
@@ -9,7 +11,7 @@
       <%= image_tag status.user.gravitar_url %>
     </div>
     <div class="span7">
-    <strong><%= status.user.profile_name %></strong>
+    <strong><%= link_to status.user.profile_name, status.user.profile_name %></strong>
       <p> <%=status.content %><p>
       </div>
         <div class ="meta">
