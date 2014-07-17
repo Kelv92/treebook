@@ -48,4 +48,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+<<<<<<< HEAD
 gem 'pundit'
+=======
+>>>>>>> c9b521a3d12eae6b93929e34df585539a41d8858

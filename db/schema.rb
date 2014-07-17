@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140717111341) do
+=======
+ActiveRecord::Schema.define(version: 20140706050656) do
+>>>>>>> c9b521a3d12eae6b93929e34df585539a41d8858
 
   create_table "statuses", force: true do |t|
     t.text     "content"
@@ -38,15 +42,21 @@ ActiveRecord::Schema.define(version: 20140717111341) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
     t.integer  "role"
+=======
+>>>>>>> c9b521a3d12eae6b93929e34df585539a41d8858
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
+<<<<<<< HEAD
   create_table "users2s", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+=======
+>>>>>>> c9b521a3d12eae6b93929e34df585539a41d8858
 end

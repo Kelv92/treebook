@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
+<<<<<<< HEAD
 	  include Pundit
+=======
+>>>>>>> c9b521a3d12eae6b93929e34df585539a41d8858
 	before_action :configure_permitted_parameters, if: :devise_controller?
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.

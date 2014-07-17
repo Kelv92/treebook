@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
   get 'profiles/show'
+<<<<<<< HEAD
   devise_for :users
+=======
+
+  devise_for :users
+
+
+>>>>>>> c9b521a3d12eae6b93929e34df585539a41d8858
   devise_scope :user  do
     get 'register', to: 'devise/registrations#new', as: :register
     get 'login', to: 'devise/sessions#new', as: :login
     get 'logout', to: 'devise/sessions#destroy', as: :destroy
     get 'edit', to: 'devise/registrations#edit', as: :edit
+<<<<<<< HEAD
     get 'users', to: 'users#index', as: :users
   end
   
@@ -19,6 +27,18 @@ resources :users
 
 
 
+=======
+  end
+
+
+
+
+  resources :statuses
+  get 'feed', to: 'statuses#index', as: :feed
+  root to: 'statuses#index'
+
+  get '/:id', to: 'profiles#show'
+>>>>>>> c9b521a3d12eae6b93929e34df585539a41d8858
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -74,4 +94,7 @@ resources :users
   #     resources :products
   #   end
 end
+<<<<<<< HEAD
 
+=======
+>>>>>>> c9b521a3d12eae6b93929e34df585539a41d8858
